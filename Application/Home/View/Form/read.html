@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>id:</td>
+        <td>{$data.id}</td>
+    </tr>
+    <tr>
+        <td>标题：</td>
+        <td>{$data.title}</td>
+    </tr>
+    <tr>
+        <td>内容：</td>
+        <td>{$data.content}</td>
+    </tr>
+</table>
+<p>{$title}</p>
+<?php echo I('param.id',0); ?>
+<p>{$Think.config.db_charset}</p>
+</body>
+</html>

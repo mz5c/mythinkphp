@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DuxCms安装向导</title>
+<link href="base.css" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" >
+    function delayURL(url) {
+        var delay = document.getElementById("time").innerHTML;
+        if(delay > 0) {
+            delay--;
+            document.getElementById("time").innerHTML = delay;
+        } else {
+            window.top.location.href = url;
+        }
+       t = setTimeout("delayURL('" + url + "')", 1000);
+    }
+	function stop1(){
+	t && clearTimeout(t);
+	}
+</script>
+</head>
+<body>
+<div class="g-install">
+  <div class="m-head">
+    <h1>DuxCms安装进行中</h1>
+  </div>
+  <div class="m-foot"> 
+  	<span id="time" >15</span>秒后安装完成
+  </div>
+  <div class="m-foot"> 
+  	<a href="javascript:void(0);" class="submit">安装中...</a>
+	<a href="index.html" class="submit">取消</a>
+  </div>
+</div>
+<script type="text/javascript">
+delayURL("test.html");
+</script>
+</body>
+</html>

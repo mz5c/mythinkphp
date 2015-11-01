@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript" >
+    function exportdata(){
+        var form=document.getElementById('export_data');
+        form.submit();
+    }
+</script>
+<form id='export_data' action="__URL__/export" method="POST" >
+    <input type="hidden"  name="data" value='{$test}'>
+</form>
+<!--<include file="./Application/Home/View/Index/hello.html" />-->
+<!--<include file="Public/menu.html" />-->
+<include file="./Public/header.html" title="ThinkPHP" keywords="开源web开发框架"/>
+<table border="1">
+    <thead>
+    <tr>
+        <th width="60">id</th>
+        <th width="60">name</th>
+        <th width="60">passwd</th>
+        <th width="60">type</th>
+        <th width="60">money</th>
+        <th width="60">score</th>
+    </tr>
+    </thead>
+    <tbody>
+    <volist name="list" id="vo">
+        <tr>
+            <td align="center">{$vo.id}</td>
+            <td align="center">{$vo.name}</td>
+            <td align="center">{$vo.passwd|md5|strtoupper|substr=0,3}</td>
+            <td align="center">{$vo.type}</td>
+            <td align="center">{$vo.money}</td>
+            <td align="center">{$vo.score}</td>
+        </tr>
+    </volist>
+    </tbody>
+</table>
+<p><?php echo 'hello world'.'<br>';
+ echo 'thinkphp_version is '.THINK_VERSION;?></p>
+<a href="javascript:void(0);" onclick="exportdata()"><span>导出</span></a>
+<a href="__PUBLIC__/joy/index.html" ><span>Joy</span></a>
+</body>
+</html>

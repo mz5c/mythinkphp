@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<volist name="list" id="vo">
+    {$vo.id}:{$vo.title}:{$vo.content}<br/>
+</volist>
+<volist name="list" id="vo" mod="3" >
+    <eq name="mod" value="1">{$vo.title}<br><else/>hello</eq>
+</volist>
+</body>
+</html>

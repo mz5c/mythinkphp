@@ -13,4 +13,9 @@ class NewcController extends Controller{
     public function Index(){
         $this->show('new controller');
     }
+    public function hello(){
+        $this->Index();
+        echo '<br>';
+        echo 'hello world';
+    }
 }

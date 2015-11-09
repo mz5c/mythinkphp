@@ -19,7 +19,7 @@ define('APP_DEBUG',True);
 
 // 定义应用目录
 define('APP_PATH','./Application/');
-//define('BIND_MODULE','Admin');
+define('BIND_MODULE','Admin');
 //define('BIND_MODULE','install');
 // 引入ThinkPHP入口文件
 define('RUNTIME_PATH','./Runtime/');

@@ -11,6 +11,7 @@ use Think\Controller;
 
 class NewcController extends Controller{
     public function Index(){
+        echo getcwd().'<br>';
         $this->show('new controller');
     }
     public function hello(){

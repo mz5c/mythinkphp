@@ -7,6 +7,9 @@ class IndexController extends Controller {
     }
 
     public function hello(){
-        echo 'Hello World!';
+        $data = M('user');
+        $res = $data->find(1);
+        $this->assign('data',$res);
+        $this->display();
     }
 }
